@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta charset=utf-8 />
+  <title>UW Cart Lab | Mapbox</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Space+Mono" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="big.css">
+  <link href='https://www.mapbox.com/base/latest/base.css' rel='stylesheet' />
+  <style>
+  body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #99948A;
+  }
+  
+  #map {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  
+  a {
+    color: #B2E5FF;
+    background-color: white;
+  }
+  
+  a:hover {
+    color: #FFC144;
+    text-decoration: underline;
+  }
+  
+  .nobreak {
+    white-space: pre;
+  }
+  
+  .small {
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0;
+  }
+
+  li {
+    margin-bottom: 20px;
+    list-style: disc;
+  }
+
+  ul {
+    padding-left: 50px;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+  
+  pre {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    padding: 1em;
+    font-size: 24px;
+    line-height: 105%;
+    color: black;
+    font-weight: normal;
+  }
+  
+  pre em {
+    color: #947BCC;
+  }
+  
+  span.comment {
+    color: #8A998C;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div id="slide1">
+    <div class="nobreak">Hi! 👋</div>
+    <div class="small nobreak"> @mollymerp / Molly Lloyd / molly@mapbox.com</div>
+  </div>
+  <div id="slide2">
+    <div class="space-bottom"> I work on </div> <a class="nobreak" href="https://www.mapbox.com/mapbox-gl-js/api/">mapbox-gl-js</a>
+  </div>
+  <div id="slide3" class="nobreak">
+    ✨ client side rendering ✨
+  </div>
+  <div id="slide4">
+    <div class="space-bottom nobreak"><a href="https://www.mapbox.com/mapbox-gl-style-spec/">mapbox gl style specification </a></div>
+    <pre>
+{
+  "version": 8,
+  "name": "Mapbox Streets",
+  "sprite": "mapbox://sprites/mapbox/streets-v8",
+  "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+  "sources": {...},
+  "layers": [...]
+} 
+    </pre class="center">
+    <div class="nobreak">🎨 how your map <span class="italic">looks</span> 🎨</div>
+  </div>
+  <div id="slide5">
+    <div class="space-bottom">mapbox-gl-js</div>
+    <pre>
+var map = <em>new</em> mapboxgl.Map({
+  <em>container</em>: "map", <span class="comment"> // container id</span>
+  <em>style</em>: "mapbox://styles/mapbox/streets-v9", <span class="comment">//stylesheet location</span>
+  <em>center</em>: [lng, lat], <span class="comment">// starting position</span>
+  <em>zoom</em>: 10, <span class="comment">// starting zoom</span>
+});       
+    </pre>
+    <div class="nobreak">what your map <span class="italic">does 🚀</span></div>
+  </div>
+  <div>
+  Cool 🗺s
+  <ul>
+    <li class="nobreak">D3 + Mapbox: <a href="https://www.mapbox.com/bites/00223/">Geofencing</a></li>
+    <li class="nobreak"><a href="https://www.mapbox.com/bites/00280/">Timeseries Animations</a></li>
+    <li class="nobreak">Virtual tour: <a href="https://www.mapbox.com/bites/00233/">Rio Olympics</a></li>
+    <li class="nobreak"><a href="https://www.mapbox.com/bites/00279/">Pokemon</a></li>
+    <li class="nobreak">3D: <a href="https://www.mapbox.com/bites/00094/gl/">Bike routes</a></li>
+  </ul>
+  </div>
+  <div class="nobreak">Put some📍on a map</div>
+  <div class="nobreak">Mapbox Studio dataset editor 📝📈</div>
+</body>
+<script src="big.js"></script>
+
+</html>
+
